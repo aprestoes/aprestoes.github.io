@@ -1,0 +1,31 @@
+
+div a, div a:hover, span {
+  color: #339FF0;
+  text-decoration: none;
+}
+
+/* Font Awesome */
+.fab, .far, .fas {
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: #222;
+  vertical-align: middle;
+}
+
+/* Owl Carousel */
+
+.owl-stage div {
+  display: inline;
+}
+
+#fp-nav ul li .fp-tooltip {
+  /**
+  Overrides the nav bar tooltip text color.
+  **/
+  color: black;
+}
+
+.fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+  border-color: transparent #339FF0 transparent #339FF0;
+}
