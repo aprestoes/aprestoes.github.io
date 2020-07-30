@@ -3,7 +3,7 @@
 A simplistic, minimalistic, barebones (and all the other good ajectives) one-page portfoilo website.
 
 ![](example.gif)
-[Live site](aprestoes.github.io)
+[Live site](http://aprestoes.github.io)
 
 As of right now it's a glorified landing page, but it serves as a nice showcase for Owl Carousel and the default Skeleton template.
 
