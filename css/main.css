@@ -1,3 +1,6 @@
+.section {
+  height: 95vh;
+}
 
 div a, div a:hover, span {
   color: #339FF0;
