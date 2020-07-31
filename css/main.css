@@ -1,4 +1,6 @@
-.section {
+.section:not(#photography):not(#footer-bar) { /* Because photography
+  section is larger than viewpoint */
+  position: relative;
   height: 95vh;
 }
 
@@ -16,19 +18,6 @@ div a, div a:hover, span {
   vertical-align: middle;
 }
 
-/* Owl Carousel */
-
-.owl-stage div {
-  display: inline;
-}
-
-#fp-nav ul li .fp-tooltip {
-  /**
-  Overrides the nav bar tooltip text color.
-  **/
-  color: black;
-}
-
-.fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
-  border-color: transparent #339FF0 transparent #339FF0;
+img {
+  width: 100%;
 }

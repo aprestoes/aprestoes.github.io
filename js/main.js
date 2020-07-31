@@ -55,7 +55,6 @@ var startTinySlider = function () {
 
 $(document).ready(function(){
   addRotatingWords();
-  //startOwlCarousel();
   startTinySlider();
 });
 
