@@ -26,24 +26,27 @@ img {
   width: 100%;
 }
 
+/* Buttons */
 .floating-button {
-  position: fixed;
   width: 20px;
   height: 20px;
   text-decoration: none;
+  z-index: 1;
 }
 
 #up-button {
+  position: fixed;
   bottom: 40px;
   right: 40px;
 }
 
-/* Dark Mode */
 #dark-button {
+  position: absolute;
   top: 40px;
   right: 40px;
 }
 
+/* Dark Mode */
 .dark-body {
   color: #dcd9d4;
   background-color: #181a1b;

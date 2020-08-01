@@ -61,7 +61,7 @@ var startButtonListeners = function () {
 
   $('#dark-button').click(function(e) {
     e.preventDefault();
-    $('#dark-button').toggleClass('far fas')
+    $('#dark-button').toggleClass('far fas');
     $('body').toggleClass('dark-body');
   });
 
