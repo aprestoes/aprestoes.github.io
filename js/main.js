@@ -58,7 +58,13 @@ var startButtonListeners = function () {
     return false;
   });
 
-  $('#up-button').fadeOut();
+  $('#dark-button').click(function(e) {
+    e.preventDefault();
+    $('#dark-button').toggleClass('far fas')
+    $('body').toggleClass('dark-body');
+  });
+
+  $('#up-button').hide();
 }
 
 //Event Listeners

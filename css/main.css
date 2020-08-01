@@ -38,7 +38,21 @@ img {
   right: 40px;
 }
 
+/* Dark Mode */
 #dark-button {
   top: 40px;
   right: 40px;
+}
+
+.dark-body {
+  color: #dcd9d4;
+  background-color: #181a1b;
+}
+
+.dark-body a {
+  color: #dcd9d4;
+}
+
+.dark-body hr {
+  border-top-color: #393939;
 }
