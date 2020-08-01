@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .section:not(#photography):not(#footer-bar) { /* Because photography
   section is larger than viewpoint and footer-bar is small */
   position: relative;
@@ -12,6 +16,12 @@ div a, div a:hover, span {
   color: #339FF0;
   text-decoration: none;
 }
+
+/*.education-box {
+  border: solid;
+  border-color: #393939;
+  border-width: 1px;
+}*/
 
 /* Font Awesome */
 .fab, .far, .fas {
@@ -47,15 +57,15 @@ img {
 }
 
 /* Dark Mode */
-.dark-body {
+body.dark {
   color: #dcd9d4;
   background-color: #181a1b;
 }
 
-.dark-body a:not(.highlighted-words) {
+body.dark a:not(.highlighted-words) {
   color: #dcd9d4;
 }
 
-.dark-body hr {
+body.dark hr {
   border-top-color: #393939;
 }

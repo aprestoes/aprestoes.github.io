@@ -54,15 +54,23 @@ var startTinySlider = function () {
 }
 
 var startButtonListeners = function () {
+  const preferDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  if (preferDark.matches) { //If user sets dark mode in OS, set dark on load.
+    $('#dark-button').toggleClass('far fas');
+    $('body').toggleClass('dark');
+  }
+
   $('#up-button').click(function() {
     $('html, body').animate({scrollTop : 0}, 600);
     return false;
   });
 
+
   $('#dark-button').click(function(e) {
     e.preventDefault();
     $('#dark-button').toggleClass('far fas');
-    $('body').toggleClass('dark-body');
+    $('body').toggleClass('dark');
   });
 
   $('#up-button').hide();
