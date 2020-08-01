@@ -1,7 +1,11 @@
 .section:not(#photography):not(#footer-bar) { /* Because photography
-  section is larger than viewpoint */
+  section is larger than viewpoint and footer-bar is small */
   position: relative;
   height: 95vh;
+}
+
+.section:not(#hero) {
+  text-align: center;
 }
 
 div a, div a:hover, span {
@@ -20,4 +24,21 @@ div a, div a:hover, span {
 
 img {
   width: 100%;
+}
+
+.floating-button {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+}
+
+#up-button {
+  bottom: 40px;
+  right: 40px;
+}
+
+#dark-button {
+  top: 40px;
+  right: 40px;
 }

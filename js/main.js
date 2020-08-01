@@ -52,10 +52,31 @@ var startTinySlider = function () {
   });
 }
 
+var startButtonListeners = function () {
+  $('#up-button').click(function() {
+    $('html, body').animate({scrollTop : 0}, 600);
+    return false;
+  });
 
+  $('#up-button').fadeOut();
+}
+
+//Event Listeners
+//On scroll
+$(document).scroll(function() {
+  var scrolled = $(window).scrollTop();
+  if (scrolled > 100) {
+    $('#up-button').fadeIn();
+  } else {
+    $('#up-button').fadeOut();
+  }
+});
+
+//On start
 $(document).ready(function(){
   addRotatingWords();
   startTinySlider();
+  startButtonListeners();
 });
 
 }());
