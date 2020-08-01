@@ -8,7 +8,7 @@ A simplistic, minimalistic, barebones (and all the other good ajectives) one-pag
 As of right now it's a glorified landing page, but it serves as a nice showcase for Owl Carousel and the default Skeleton template.
 
 ## Config
-```
+```javascript
 const sentenceBeginning = "Hi, I'm ";
 const words = [
   "Dan."
