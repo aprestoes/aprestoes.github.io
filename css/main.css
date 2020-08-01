@@ -49,7 +49,7 @@ img {
   background-color: #181a1b;
 }
 
-.dark-body a {
+.dark-body a:not(.highlighted-words) {
   color: #dcd9d4;
 }
 

@@ -16,19 +16,20 @@ const words = [ //Descriptive and re-affirming words here
   
 var addRotatingWords = function() {
   
-  var wordsDiv = document.getElementById("rotating-words");
+  var wordsDiv = document.getElementById('rotating-words');
   
   function addElement(word) {
-    var newDiv = document.createElement("div");
+    var newDiv = document.createElement('div');
     newDiv.className = 'item';
     
-    var newElement = document.createElement("h4");
+    var newElement = document.createElement('h4');
     var textBeginning = document.createTextNode(sentenceBeginning);
-    var wordElement = document.createElement("a");
+    var wordElement = document.createElement('a');
     var textWord = document.createTextNode(word);
     
     newElement.appendChild(textBeginning);
     wordElement.appendChild(textWord);
+    wordElement.className = 'highlighted-words'; //Used for dark mode
     newElement.appendChild(wordElement);
     
     newDiv.appendChild(newElement);
