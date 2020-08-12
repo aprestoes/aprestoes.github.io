@@ -26,7 +26,7 @@ var rotatingParagraphs = [
   //"More stuff",
   "<span>Beep, boop, bop.</span> Check out my Github projects (including this website) down below.",
   "Fully <span>TEFL</span> (Teaching English as a Foreign Language) certified. Taught English throughout Italy and Austria during Summer 2019.",
-  "Analog and digital. An avid hobbyist who loves taking capturing shots of cool places, people, and things. View some of my favourite photos by checking out my Flickr.",
+  "Analog and digital. An avid hobbyist who loves taking capturing shots of cool places, people, and things. View some of my favourite photos by clicking <a href='images/image1.jpg' data-lightbox='photography' data-title='STM Metro. Montreal, QC - Olympus Trip 35, Ilford HP5'>here.</a><a href='images/image2.jpg' data-lightbox='photography' data-title='Gatineau, QC. Olympus Trip 35, Ilford HP5'></a><a href='images/image3.jpg' data-lightbox='photography' data-title='Gatineau, QC. - Olympus Trip 35, Ilford HP5'></a><a href='images/image4.jpg' data-lightbox='photography' data-title='Montreal, QC - Olympus Trip 35, Ilford HP5'></a>", //You can add lightboxes here too
   "3 continents, 10 countries, 27 provinces/states/regions, countless cities, but still <span>counting.</span>",
   "Summer camp, STEM camp, English camp. Also with relevant training from the American Camp Association, the National Child Traumatic Stress Network, and the Canadian Red Cross.",
   "Guitar, drums, bass, and ukulele. Jazz band, concert band, guitar ensemble, musical orchestra, and (of course) a high school rock band."
@@ -125,6 +125,8 @@ var startButtonListeners = function () {
 
     return false;
   });
+
+  //Gallery link listener
 
   //Help button
   /*$("#help-button").click(function(e) {
