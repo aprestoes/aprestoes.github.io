@@ -1,55 +1,106 @@
 ;(function () {
 
 	'use strict';
+/*To see the fully documented code and configurable code, go to the
+original template repo at:
+https://github.com/aprestoes/minimalist-landing-page/tree/dev
+*/
 
-const sentenceBeginning = "Hi, I'm "; //sentenceBeginning + word[i]
+var headersBlack = [ //headersBlack + headersBlue, e.g. "Hi, I'm Dan"
+  "Hi, I'm "
+];
+
+var headersBlue = [ //Descriptive and re-affirming words here
+  "Dan.",
+  //"a student.",
+  "a programmer.",
+  "a teacher.",
+  "a photographer.",
+  "a traveller.",
+  "a camp counsellor.",
+  "a musician."
+];
   
-const words = [ //Descriptive and re-affirming words here
-    "Dan.",
-    "a student.",
-    "a programmer.",
-    "a camp counsellor.",
-    "a musician.",
-    "a traveller.",
-    "a goof."
-  ];
+var rotatingParagraphs = [
+  "Currently studying at Carleton University for computer science with a specialization in software engineering and a minor in applied linguistics. <span>Whew.</span>",
+  //"More stuff",
+  "<span>Beep, boop, bop.</span> Check out my Github projects (including this website) down below.",
+  "Fully <span>TEFL</span> (Teaching English as a Foreign Language) certified. Taught English throughout Italy and Austria during Summer 2019.",
+  "Analog and digital. An avid hobbyist who loves taking capturing shots of cool places, people, and things. View some of my favourite photos by checking out my Flickr.",
+  "3 continents, 10 countries, 27 provinces/states/regions, countless cities, but still <span>counting.</span>",
+  "Summer camp, STEM camp, English camp. Also with relevant training from the American Camp Association, the National Child Traumatic Stress Network, and the Canadian Red Cross.",
+  "Guitar, drums, bass, and ukulele. Jazz band, concert band, guitar ensemble, musical orchestra, and (of course) a high school rock band."
+];
   
 var addRotatingWords = function() {
   
-  var wordsDiv = document.getElementById('rotating-words');
+  var wordsDiv = $("#rotating-words");
+  var paragraphsDiv = $("#rotating-paragraphs");
+  var largestArrayLength;
+
+  largestArrayLength = Math.max(headersBlack.length, headersBlue.length, rotatingParagraphs.length);
   
-  function addElement(word) {
-    var newDiv = document.createElement('div');
-    newDiv.className = 'item';
+  for (var index = 0; index < largestArrayLength; index++) {
+    //Temp variables
+    var headerBeginning;
+    var headerEnd;
+    var paragraph = rotatingParagraphs[0]; //Default
+
+    if (index >= headersBlack.length) { //Use last element
+      headerBeginning = headersBlack[headersBlack.length - 1];
+    } else {
+      headerBeginning = headersBlack[index];
+    }
+
+    if (index >= headersBlue.length) {
+      headerEnd = headersBlue[headersBlue.length - 1];
+    } else {
+      headerEnd = headersBlue[index];
+    }
     
-    var newElement = document.createElement('h4');
-    var textBeginning = document.createTextNode(sentenceBeginning);
-    var wordElement = document.createElement('a');
-    var textWord = document.createTextNode(word);
+    if (index >= rotatingParagraphs.length) {
+      paragraph = rotatingParagraphs[rotatingParagraphs.length - 1];
+    } else {
+      paragraph = rotatingParagraphs[index];
+    }
     
-    newElement.appendChild(textBeginning);
-    wordElement.appendChild(textWord);
-    wordElement.className = 'highlighted-words'; //Used for dark mode
-    newElement.appendChild(wordElement);
+    //Add headers
+    var newDiv = jQuery("<div>").attr("id", "slide" + index).addClass("item");
     
-    newDiv.appendChild(newElement);
-    wordsDiv.appendChild(newDiv);
+    var newElement = jQuery("<h4>").append(headerBeginning);
+    var blueElement = jQuery("<a>").text(headerEnd).addClass("highlighted-words").appendTo(newElement);
+
+    $(newElement).appendTo(newDiv);
+    $(newDiv).appendTo(wordsDiv);
+
+
+    //Add paragraphs
+    var newPElement = jQuery("<p>").html(paragraph).appendTo(newDiv);
   }
-  
-  /*var links = [ //Links for the corresponding elements in words array.
-  ];*/
-  
-  words.forEach(element => addElement(element));
 };
 
+var tnsSlider;
+
 var startTinySlider = function () {
-  tns({
-    mode: 'gallery', //carousel is also nice
+  tnsSlider = tns({
+    mode: "gallery",
     controls: false,
+    arrowKeys: true,
     nav: false,
     autoplay: true,
-    autoplayButtonOutput: false,
+    autoplayButton: "#play-button",
+    autoplayTimeout: 6000,
+    autoplayText: ["", ""], //Empty
     mouseDrag: true
+  });
+
+
+  $(document).keydown(function(e) {
+    /*if (e.keyCode == 32) { //Spacebar pause
+      $("#play-button").click();
+    } else*/ if (!(tnsSlider.autoplay) && (e.keyCode == 37 || e.keyCode == 39)) { //If already paused, keep it paused on keys
+      tnsSlider.pause();
+    }
   });
 }
 
@@ -61,31 +112,35 @@ var startButtonListeners = function () {
     $('body').toggleClass('dark');
   }
 
-  $('#up-button').click(function() {
-    $('html, body').animate({scrollTop : 0}, 600);
-    return false;
-  });
-
-
   $('#dark-button').click(function(e) {
     e.preventDefault();
     $('#dark-button').toggleClass('far fas');
     $('body').toggleClass('dark');
   });
 
-  $('#up-button').hide();
-}
+  $('#play-button').click(function(e) {
+    e.preventDefault;
+    e.stopPropagation;
+    $(this).toggleClass("fa-play fa-pause");
+
+    return false;
+  });
+
+  //Help button
+  /*$("#help-button").click(function(e) {
+    e.preventDefault();
+  });
+
+  $("#help-button").hover(function() {
+    $("#overlay").show();
+  })
+
+  $("#help-button").mouseleave(function() {
+    $("#overlay").hide();
+  });*/
+};
 
 //Event Listeners
-//On scroll
-$(document).scroll(function() {
-  var scrolled = $(window).scrollTop();
-  if (scrolled > 100) {
-    $('#up-button').fadeIn();
-  } else {
-    $('#up-button').fadeOut();
-  }
-});
 
 //On start
 $(document).ready(function(){

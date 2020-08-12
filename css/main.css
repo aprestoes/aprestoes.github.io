@@ -1,30 +1,25 @@
-* {
-  box-sizing: border-box;
+body, html {
+  height: 100%;
+  overflow: hidden;
 }
 
-.section:not(#photography):not(#footer-bar) { /* Because photography
-  section is larger than viewpoint and footer-bar is small */
+.section:not(#footer-bar) {
   position: relative;
   height: 95vh;
+  overflow: auto;
 }
 
-.section:not(#hero) {
-  text-align: center;
-}
-
-div a, div a:hover, span {
+div a,
+div a:hover,
+span {
   color: #339FF0;
   text-decoration: none;
 }
 
-/*.education-box {
-  border: solid;
-  border-color: #393939;
-  border-width: 1px;
-}*/
-
 /* Font Awesome */
-.fab, .far, .fas {
+.fab,
+.far,
+.fas {
   padding: 5px;
   font-size: 20px;
   text-align: center;
@@ -36,6 +31,11 @@ img {
   width: 100%;
 }
 
+#footer-bar {
+  text-align: center;
+  margin-bottom: 0;
+}
+
 /* Buttons */
 .floating-button {
   width: 20px;
@@ -44,16 +44,42 @@ img {
   z-index: 1;
 }
 
-#up-button {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-}
-
 #dark-button {
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 20px;
+  right: 20px;
+}
+
+#play-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Help Overlay */
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#help-button {
+  z-index: 5;
+}
+
+.help-text {
+  display: none;
+  color: white;
+  z-index: 3;
 }
 
 /* Dark Mode */
@@ -62,7 +88,7 @@ body.dark {
   background-color: #181a1b;
 }
 
-body.dark a:not(.highlighted-words) {
+body.dark .far, body.dark .fas, body.dark .fab {
   color: #dcd9d4;
 }
 
