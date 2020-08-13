@@ -127,17 +127,23 @@ var startButtonListeners = function () {
   //Gallery link listener
 
   //Help button
-  /*$("#help-button").click(function(e) {
+  $("#help-button").click(function(e) {
     e.preventDefault();
   });
 
   $("#help-button").hover(function() {
-    $("#overlay").show();
+    $("#keys-text").fadeIn();
   })
 
   $("#help-button").mouseleave(function() {
-    $("#overlay").hide();
-  });*/
+    $("#keys-text").fadeOut();
+  });
+
+  if ($(window).width() < 500) {
+    $("#keys-text").text("Swipe on headers to change slides.");
+  }
+
+  $("#keys-text").fadeOut(7000);
 };
 
 //Event Listeners

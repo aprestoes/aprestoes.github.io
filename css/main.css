@@ -1,5 +1,6 @@
 body, html {
   height: 100%;
+  overflow: hidden;
 }
 
 .section:not(#footer-bar) {
@@ -26,17 +27,12 @@ span {
   vertical-align: middle;
 }
 
-hr {
-  margin-bottom: 0;
-}
-
 img {
   width: 100%;
 }
 
 #footer-bar {
   text-align: center;
-  margin-bottom: 0;
 }
 
 /* Buttons */
@@ -79,9 +75,14 @@ img {
   z-index: 5;
 }
 
+#keys-div {
+  display: absolute;
+  bottom: 5%;
+  margin-bottom: 0;
+}
+
 .help-text {
-  display: none;
-  color: white;
+  margin-bottom: 1%;
   z-index: 3;
 }
 
