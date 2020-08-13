@@ -1,11 +1,10 @@
 body, html {
   height: 100%;
-  overflow: hidden;
 }
 
 .section:not(#footer-bar) {
   position: relative;
-  height: 95vh;
+  height: 94vh;
   overflow: auto;
 }
 
@@ -25,6 +24,10 @@ span {
   text-align: center;
   color: #222;
   vertical-align: middle;
+}
+
+hr {
+  margin-bottom: 0;
 }
 
 img {
