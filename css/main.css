@@ -1,6 +1,5 @@
 body, html {
   height: 100%;
-  overflow: hidden;
 }
 
 .section:not(#footer-bar) {
@@ -33,6 +32,10 @@ img {
 
 #footer-bar {
   text-align: center;
+}
+
+hr {
+  margin-bottom: 0;
 }
 
 /* Buttons */

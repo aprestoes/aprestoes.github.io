@@ -65,7 +65,7 @@ var addRotatingWords = function() {
     }
     
     //Add headers
-    var newDiv = jQuery("<div>").attr("id", "slide" + index).addClass("item");
+    var newDiv = jQuery("<div>").addClass("item");
     
     var newElement = jQuery("<h4>").append(headerBeginning);
     var blueElement = jQuery("<a>").text(headerEnd).addClass("highlighted-words").appendTo(newElement);
@@ -93,7 +93,7 @@ var startTinySlider = function () {
     autoplayTimeout: 6000,
     autoplayText: ["<a class='fas fa-pause floating-button' href=''></a>", "<a class='fas fa-play floating-button' href=''></a>"],
     //Empty
-    mouseDrag: true
+    mouseDrag: false
   });
 }
 
@@ -123,8 +123,6 @@ var startButtonListeners = function () {
       document.getElementById("play-button").click(); //Must use DOM instead of jQuery
     }
   });
-
-  //Gallery link listener
 
   //Help button
   $("#help-button").click(function(e) {
