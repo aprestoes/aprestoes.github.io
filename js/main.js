@@ -93,7 +93,7 @@ var startTinySlider = function () {
     autoplayTimeout: 6000,
     autoplayText: ["<a class='fas fa-pause floating-button' href=''></a>", "<a class='fas fa-play floating-button' href=''></a>"],
     //Empty
-    mouseDrag: false
+    mouseDrag: true
   });
 }
 
