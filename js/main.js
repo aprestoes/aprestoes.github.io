@@ -26,7 +26,7 @@ var rotatingParagraphs = [
   //"More stuff",
   "<span>Beep, boop, bop.</span> Experienced with languages such as Java, Javascript, and Python. Check out my Github projects (including this website) down below.",
   "Fully <span>TEFL</span> (Teaching English as a Foreign Language) certified with teaching experience. Taught English throughout Italy and Austria during the summer of 2019.",
-  "Analog and digital. A hobbyist who loves capturing shots of cool places, people, and things. View some of my photos by clicking <a href='images/image1.jpg' data-lightbox='photography' data-title='STM Metro. Montreal, QC - Olympus Trip 35, Ilford HP5'>here.</a><a href='images/image2.jpg' data-lightbox='photography' data-title='Gatineau, QC. Olympus Trip 35, Ilford HP5'></a><a href='images/image3.jpg' data-lightbox='photography' data-title='Gatineau, QC. - Olympus Trip 35, Ilford HP5'></a><a href='images/image4.jpg' data-lightbox='photography' data-title='Montreal, QC - Olympus Trip 35, Ilford HP5'></a>", //You can add lightboxes here too
+  "Analog and digital. A hobbyist who loves capturing shots of cool places, people, and things. View some of my photos by clicking the camera icon.", //You can add lightboxes here too
   "3 continents, 10 countries, 27 provinces/states/regions, countless cities, but still <span>counting.</span> (Although probably won't be travelling anytime soon.)",
   "Summer camp, STEM camp, English camp. Also with relevant training from the American Camp Association and the Canadian Red Cross.",
   "Guitar, drums, bass, and ukulele. Jazz band, concert band, guitar ensemble, musical orchestra, and <span>(of course)</span> a high school rock band."
