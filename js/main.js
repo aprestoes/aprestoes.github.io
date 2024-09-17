@@ -22,7 +22,7 @@ var headersBlue = [ //Descriptive and re-affirming words here
 ];
   
 var rotatingParagraphs = [
-  "Currently studying at Carleton University for computer science with a specialization in software engineering and a minor in applied linguistics. <span>Whew.</span>",
+  "Recent Honours Bachelor of Computer Science graduate from Carleton University with a minor in applied linguistics. <span>Whew.</span>",
   //"More stuff",
   "<span>Beep, boop, bop.</span> Experienced with languages such as Java, Javascript, and Python. Check out my Github projects (including this website) down below.",
   "Fully <span>TEFL</span> (Teaching English as a Foreign Language) certified with teaching experience. Taught English throughout Italy and Austria during the summer of 2019.",
