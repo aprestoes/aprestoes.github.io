@@ -11,14 +11,14 @@ var headersBlack = [ //headersBlack + headersBlue, e.g. "Hi, I'm Dan"
 ];
 
 var headersBlue = [ //Descriptive and re-affirming words here
-  "Dan.",
+  "Dan. 👋",
   //"a student.",
-  "a programmer.",
-  "a tutor.",
-  "a photographer.",
-  "a traveller.",
-  "a camp counsellor.",
-  "a musician."
+  "a programmer. 💻",
+  "a tutor. 🎓",
+  "a photographer. 📷",
+  "a traveller. 🌎",
+  "a camp counsellor. ⛺️",
+  "a musician. 🎵"
 ];
   
 var rotatingParagraphs = [
