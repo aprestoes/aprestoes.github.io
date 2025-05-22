@@ -88,7 +88,6 @@ var startTinySlider = function () {
     arrowKeys: true,
     nav: false,
     autoplay: true,
-    autoplayButton: "#play-button",
     autoplayResetOnVisibility: false,
     autoplayTimeout: 6000,
     mouseDrag: true
