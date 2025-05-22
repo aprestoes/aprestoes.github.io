@@ -89,6 +89,7 @@ var startTinySlider = function () {
     nav: false,
     autoplay: true,
     autoplayResetOnVisibility: false,
+    autoplayButtonOutput: false,
     autoplayTimeout: 6000,
     mouseDrag: true
   });
@@ -106,13 +107,6 @@ var startButtonListeners = function () {
     e.preventDefault();
     $('#dark-button').toggleClass('far fas');
     $('body').toggleClass('dark');
-  });
-
-  $('#play-button').click(function(e) {
-    e.preventDefault;
-    e.stopPropagation;
-
-    return false;
   });
 
   $(document).keydown(function(e) {
