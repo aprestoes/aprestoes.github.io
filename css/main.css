@@ -1,0 +1,97 @@
+body, html {
+  height: 100%;
+}
+
+.section:not(#footer-bar) {
+  position: relative;
+  height: 94vh;
+  overflow: auto;
+}
+
+div a,
+div a:hover,
+span {
+  color: #339FF0;
+  text-decoration: none;
+}
+
+/* Font Awesome */
+.fab,
+.far,
+.fas {
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: #222;
+  vertical-align: middle;
+}
+
+img {
+  width: 100%;
+}
+
+#footer-bar {
+  text-align: center;
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+/* Buttons */
+#email-btn {
+  padding-left: 1.5px;
+}
+
+.floating-button {
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+  z-index: 1;
+}
+
+#dark-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#play-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Tiny Slider 2 has some issues with autoplay button and
+mobile devices/touch swiping */
+@media only screen and (max-device-width: 500px) {
+  #play-button {
+    display: none;
+  }
+}
+
+/* Help Overlay */
+#keys-div {
+  display: absolute;
+  bottom: 5%;
+  margin-bottom: 0;
+}
+
+.help-text {
+  margin-bottom: 1%;
+  z-index: 3;
+}
+
+/* Dark Mode */
+body.dark {
+  color: #dcd9d4;
+  background-color: #181a1b;
+}
+
+body.dark .far, body.dark .fas, body.dark .fab {
+  color: #dcd9d4;
+}
+
+body.dark hr {
+  border-top-color: #393939;
+}
