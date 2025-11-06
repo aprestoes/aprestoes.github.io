@@ -14,7 +14,6 @@ var headersBlack = [ //headersBlack + headersBlue, e.g. "Hi, I'm Dan"
 
 var headersBlue = [ //Descriptive and re-affirming words here
   "Dan. 👋",
-  //"a student.",
   "a programmer. 💻",
   "a tutor. 🎓",
   "a photographer. 📷",
@@ -25,11 +24,10 @@ var headersBlue = [ //Descriptive and re-affirming words here
   
 var rotatingParagraphs = [
   "Graduated with an Honours Bachelor of Computer Science and a minor in Applied Linguistics from Carleton University. <span>Whew.</span>",
-  //"More stuff",
   "<span>Beep, boop, bop.</span> Experienced with languages such as Java, Javascript, and Python. Check out my Github projects (including this website) down below.",
   "Fully <span>TEFL</span> (Teaching English as a Foreign Language) certified with teaching experience. Taught English throughout Italy and Austria during the summer of 2019.",
-  "Cameras capture memories and tell stories. Click the camera icon for some of mine.", //You can add lightboxes here too
-  "4 continents, 14 countries, 38 provinces/states/regions, countless cities, but <span>who's counting?</span>",
+  "Cameras capture <span>memories</span> and tell stories. Click the camera icon to see some of mine.", //You can add lightboxes here too
+  "4 continents, 17 countries, 44 provinces/states/regions, countless cities, but <span>who's counting?</span>",
   "Campfires, code, and capture the flag. I've worked at STEM camps, English camps, and traditional summer camps. I also have certs from the ACA and American Red Cross. <span>No biggie.</span>",
   "Guitar, drums, bass, and ukulele. Jazz band, concert band, guitar ensemble, musical orchestra, and <span>(of course)</span> a high school rock band."
 ];
